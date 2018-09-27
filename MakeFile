@@ -1,0 +1,9 @@
+install: get_dep_server get_dep_client
+
+get_dep_server:
+    cd server
+    yarn
+
+get_dep_client:
+    cd client
+    yarn
