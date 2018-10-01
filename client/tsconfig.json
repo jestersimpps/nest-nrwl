@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@client/ui": [
+        "libs/ui/src/index.ts"
+      ]
     }
   },
   "exclude": [
