@@ -1,0 +1,23 @@
+<div  fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+  <div fxFlex="50%">
+    <b>Derniere version:</b>
+    <mat-list class="pb1">
+      <mat-list-item> Changed document Title </mat-list-item>
+      <mat-list-item><i class="material-icons mr1">history</i> 01/10/2018 by eric@fednot.be </mat-list-item>
+    </mat-list>
+    <button mat-flat-button >Telecharger</button>
+  </div>
+  <div fxFlex="50%">
+    <form [formGroup]="form" (ngSubmit)="submit()" >
+      <mat-form-field fxFill>
+        <input matInput placeholder="Titre de changement">
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <textarea matInput placeholder="Description du changement"></textarea>
+      </mat-form-field>
+      <button mat-flat-button fxFlexAlign="end">Ajouter change</button>
+    </form>
+  </div>
+
+</div>
+

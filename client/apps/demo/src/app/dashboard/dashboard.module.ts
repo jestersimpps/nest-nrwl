@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NxModule} from '@nrwl/nx';
-import {DashboardComponent} from "./view/dashboard.component";
+import {DashboardComponent} from "./dashboard.component";
 import {ProjectListComponent} from "./project-list/project-list.component";
 import {ProjectListItemComponent} from "./project-list-item/project-list-item.component";
 import {SharedModule} from "../shared/shared.module";
@@ -21,5 +21,5 @@ import {SharedModule} from "../shared/shared.module";
   ],
   providers: [],
 })
-export class DemoDashboardModule {
+export class DashboardModule {
 }

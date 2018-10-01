@@ -3,18 +3,20 @@ import {NgModule} from '@angular/core';
 
 import {DemoComponent} from './demo.component';
 import {NxModule} from '@nrwl/nx';
-import {DemoDashboardModule} from "./dashboard/dashboard.module";
-import {ProjectComponent} from './project/project.component';
+import {DashboardModule} from "./dashboard/dashboard.module";
 import {SharedModule} from "./shared/shared.module";
 import {NewProjectComponent} from './new-project/new-project.component';
+import {ProjectModule} from "./project/project.module";
 
 @NgModule({
-  declarations: [DemoComponent, ProjectComponent, NewProjectComponent, ],
+  declarations: [DemoComponent, NewProjectComponent,],
   imports: [
     BrowserModule,
     SharedModule,
     NxModule.forRoot(),
-    DemoDashboardModule,
+    DashboardModule,
+    ProjectModule,
+
   ],
   providers: [],
   bootstrap: [DemoComponent]
