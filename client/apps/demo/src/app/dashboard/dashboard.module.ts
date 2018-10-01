@@ -1,26 +1,22 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NxModule} from '@nrwl/nx';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoDashboardRoutingModule} from "./dashboard-routing.module";
 import {DashboardComponent} from "./view/dashboard.component";
-import {UiCardModule} from "../../../../../libs/ui/src/lib/ui-card/ui-card.module";
-import {TodolistComponent} from "./todolist/todolist.component";
-import {TodolistitemComponent} from "./todolistitem/todolistitem.component";
+import {ProjectListComponent} from "./project-list/project-list.component";
+import {ProjectListItemComponent} from "./project-list-item/project-list-item.component";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    TodolistComponent,
-    TodolistitemComponent
+    ProjectListComponent,
+    ProjectListItemComponent,
+
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     NxModule.forRoot(),
-    DemoDashboardRoutingModule,
-    BrowserAnimationsModule,
-
-    UiCardModule,
 
   ],
   providers: [],

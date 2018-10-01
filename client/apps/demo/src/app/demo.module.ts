@@ -3,24 +3,21 @@ import {NgModule} from '@angular/core';
 
 import {DemoComponent} from './demo.component';
 import {NxModule} from '@nrwl/nx';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoRoutingModule} from "./demo-routing.module";
 import {DemoDashboardModule} from "./dashboard/dashboard.module";
-import {MatButtonModule, MatMenuModule, MatToolbarModule} from "@angular/material";
+import {ProjectComponent} from './project/project.component';
+import {SharedModule} from "./shared/shared.module";
+import {NewProjectComponent} from './new-project/new-project.component';
 
 @NgModule({
-  declarations: [DemoComponent],
+  declarations: [DemoComponent, ProjectComponent, NewProjectComponent, ],
   imports: [
     BrowserModule,
+    SharedModule,
     NxModule.forRoot(),
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    DemoRoutingModule,
     DemoDashboardModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [DemoComponent]
 })
-export class DemoModule {}
+export class DemoModule {
+}
