@@ -7,6 +7,6 @@ export class AppController {
 
   @Get()
   root(): string {
-    return this.appService.root();
+    return '<a href="/api">Check swagger for api documentation</a>';
   }
 }
