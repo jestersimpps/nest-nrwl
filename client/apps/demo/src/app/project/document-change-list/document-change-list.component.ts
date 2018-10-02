@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {HistoricalChange} from "../../../../../../../shared";
 
 @Component({
@@ -7,7 +7,7 @@ import {HistoricalChange} from "../../../../../../../shared";
   styleUrls: ['./document-change-list.component.css']
 })
 export class DocumentChangeListComponent implements OnInit {
-
+  @Input() expanded: boolean;
   changes: HistoricalChange[] = [
     {
       author: 'bert.wijnants@gmail.com',

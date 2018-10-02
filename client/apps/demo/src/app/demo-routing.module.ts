@@ -7,7 +7,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 const routes: Routes = [
   {
     path: 'projects/:id',
-    component: ProjectComponent
+    component: ProjectComponent,
   },
   {
     path: 'new/project',
@@ -17,14 +17,13 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent
   },
-  { path: '**', redirectTo: 'dashboard' }
+  {path: '**', redirectTo: 'dashboard'}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
       onSameUrlNavigation: 'reload',
-      enableTracing:true
     })
   ],
   exports: [RouterModule]

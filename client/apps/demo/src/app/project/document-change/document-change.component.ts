@@ -9,6 +9,7 @@ import {HistoricalChange} from "../../../../../../../shared";
 export class DocumentChangeComponent implements OnInit {
 
   @Input() change: HistoricalChange;
+  @Input() expanded: boolean;
 
   constructor() {
   }

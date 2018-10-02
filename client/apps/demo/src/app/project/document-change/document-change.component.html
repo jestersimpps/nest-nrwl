@@ -1,9 +1,9 @@
-<mat-expansion-panel class="mat-elevation-z0">
+<mat-expansion-panel class="mat-elevation-z0" [expanded]="expanded">
   <mat-expansion-panel-header>
     <mat-panel-title>{{change?.title}}
     </mat-panel-title>
-    <mat-panel-description>
-      <i class="material-icons mr1">history</i> {{change?.date | date: 'medium'}} by {{change?.author}}
+    <mat-panel-description fxLayoutAlign="end center">
+      <i class="material-icons mr1">history</i> {{change?.date | date: 'medium'}} by <b class="px1">{{change?.author}}</b>
     </mat-panel-description>
   </mat-expansion-panel-header>
   <div  fxLayout="row" fxLayoutAlign="space-between center">

@@ -1,21 +1,45 @@
-<div  fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
   <div fxFlex="50%">
-    <b>Derniere version:</b>
-    <mat-list class="pb1">
-      <mat-list-item> Changed document Title </mat-list-item>
-      <mat-list-item><i class="material-icons mr1">history</i> 01/10/2018 by eric@fednot.be </mat-list-item>
-    </mat-list>
-    <button mat-flat-button >Telecharger</button>
+    <mat-card >
+      <mat-list class="pb1">
+        <b>Dernière version:</b>
+        <mat-list-item>Remplace date du contrat</mat-list-item>
+        <mat-list-item><i class="material-icons mr1">history</i> 01/10/2018 de <b
+          class="px1">bert.wijnants@gmail.com</b>
+        </mat-list-item>
+      </mat-list>
+      <button mat-flat-button>
+        <i class="material-icons mr1">
+          save_alt
+        </i> Télécharger
+      </button>
+    </mat-card>
   </div>
   <div fxFlex="50%">
-    <form [formGroup]="form" (ngSubmit)="submit()" >
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <input id="fileInput" type="file" hidden>
+      <div fxFill class="pb2">
+        <button id="uploadButton" mat-mini-fab color="accent">
+          <i class="material-icons">
+            attach_file
+          </i>
+        </button>
+        <input class="ml1" id="textInput" type="text" placeholder="No file chosen" disabled>
+      </div>
       <mat-form-field fxFill>
         <input matInput placeholder="Titre de changement">
       </mat-form-field>
       <mat-form-field fxFill>
-        <textarea matInput placeholder="Description du changement"></textarea>
+        <textarea matInput placeholder="Description du changement" rows="3"></textarea>
       </mat-form-field>
-      <button mat-flat-button fxFlexAlign="end">Ajouter change</button>
+      <div fxLayoutAlign="end center" fxFill>
+        <button mat-flat-button>
+          <i class="material-icons mr1">
+            save
+          </i>
+          Sauvegarder
+        </button>
+      </div>
     </form>
   </div>
 
