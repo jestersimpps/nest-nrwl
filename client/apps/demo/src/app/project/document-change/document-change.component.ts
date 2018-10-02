@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {HistoricalChange} from "../../../../../../../shared";
 
 @Component({
   selector: 'demo-document-change',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentChangeComponent implements OnInit {
 
-  constructor() { }
+  @Input() change: HistoricalChange;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
 
 }

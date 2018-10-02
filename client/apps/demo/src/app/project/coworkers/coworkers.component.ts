@@ -15,9 +15,9 @@ export class CoworkersComponent  {
   addOnBlur = true;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   fruits: any[] = [
-    {name: 'Lemon'},
-    {name: 'Lime'},
-    {name: 'Apple'},
+    {name: 'bert.wijnants@gmail.com'},
+    {name: 'matthias.spaers@gmail.com'},
+    {name: 'wim.bonen@fednot.be'},
   ];
 
   add(event: MatChipInputEvent): void {

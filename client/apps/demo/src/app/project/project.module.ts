@@ -5,6 +5,7 @@ import {ProjectComponent} from "./project.component";
 import {SharedModule} from "../shared/shared.module";
 import {DocumentEditComponent} from "./document-edit/document-edit.component";
 import {CoworkersComponent} from "./coworkers/coworkers.component";
+import {DocumentChangeListComponent} from "./document-change-list/document-change-list.component";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {CoworkersComponent} from "./coworkers/coworkers.component";
     ProjectComponent,
     DocumentChangeComponent,
     DocumentEditComponent,
-    CoworkersComponent],
+    CoworkersComponent,
+    DocumentChangeListComponent],
   exports: [ProjectComponent]
 })
 export class ProjectModule {
