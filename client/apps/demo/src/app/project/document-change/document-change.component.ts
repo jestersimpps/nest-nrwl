@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HistoricalChange} from "../../../../../../../shared";
+import {HistoricalChange} from "../../models/historical-change.model";
 
 @Component({
   selector: 'demo-document-change',
