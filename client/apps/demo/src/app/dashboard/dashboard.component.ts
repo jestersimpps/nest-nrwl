@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'demo-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
-})
+  template: `
+    <div class="sm-col-12 md-col-10 mx-auto pb3">
+      <demo-projectlist></demo-projectlist>
+    </div>
+  `,
+  styles: [``]})
 export class DashboardComponent implements OnInit {
 
   constructor() { }

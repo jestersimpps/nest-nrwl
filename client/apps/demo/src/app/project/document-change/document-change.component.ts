@@ -3,9 +3,21 @@ import {HistoricalChange} from "../../../../../../../shared";
 
 @Component({
   selector: 'demo-document-change',
-  templateUrl: './document-change.component.html',
-  styleUrls: ['./document-change.component.css']
-})
+  template: `
+    <mat-expansion-panel class="mat-elevation-z0" [expanded]="expanded">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{change?.title}}
+        </mat-panel-title>
+        <mat-panel-description fxLayoutAlign="end center">
+          <i class="material-icons mr1">history</i> {{change?.date | date: 'medium'}} by <b class="px1">{{change?.author}}</b>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div  fxLayout="row" fxLayoutAlign="space-between center">
+        {{change?.description}}
+      </div>
+    </mat-expansion-panel>
+  `,
+  styles: [``]})
 export class DocumentChangeComponent implements OnInit {
 
   @Input() change: HistoricalChange;

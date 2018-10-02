@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'demo-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styles: [``]
 })
 export class ProjectComponent implements OnInit {
   expandChanges = true

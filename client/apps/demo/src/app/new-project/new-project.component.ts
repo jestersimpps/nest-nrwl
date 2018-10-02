@@ -4,7 +4,7 @@ import {FormGroup} from "@angular/forms";
 @Component({
   selector: 'demo-new-project',
   templateUrl: './new-project.component.html',
-  styleUrls: ['./new-project.component.css']
+  styles: [``]
 })
 export class NewProjectComponent implements OnInit {
 

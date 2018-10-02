@@ -4,9 +4,24 @@ import {MatChipInputEvent} from "@angular/material";
 
 @Component({
   selector: 'demo-coworkers',
-  templateUrl: './coworkers.component.html',
-  styleUrls: ['./coworkers.component.css']
-})
+  template: `
+
+    <mat-form-field class="example-chip-list" fxFill>
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                  [removable]="removable" (removed)="remove(fruit)">
+          {{fruit.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Ajoute nouveau cooperateur..."
+               [matChipInputFor]="chipList"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               [matChipInputAddOnBlur]="addOnBlur"
+               (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+  `,
+  styles: [``]})
 export class CoworkersComponent  {
 
   visible = true;

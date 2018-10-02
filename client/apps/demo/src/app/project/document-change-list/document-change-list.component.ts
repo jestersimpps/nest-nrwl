@@ -3,9 +3,8 @@ import {HistoricalChange} from "../../../../../../../shared";
 
 @Component({
   selector: 'demo-document-change-list',
-  templateUrl: './document-change-list.component.html',
-  styleUrls: ['./document-change-list.component.css']
-})
+  template: '<demo-document-change *ngFor="let change of changes" [change]="change" [expanded]="expanded"></demo-document-change>',
+  styles: [``]})
 export class DocumentChangeListComponent implements OnInit {
   @Input() expanded: boolean;
   changes: HistoricalChange[] = [
