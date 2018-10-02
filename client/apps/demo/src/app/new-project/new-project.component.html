@@ -36,6 +36,15 @@
 
   <mat-card class=" my1 mx1 clearfix">
     <form [formGroup]="vendorForm" (ngSubmit)="submit()" fxFill>
+      <div>
+        <mat-card-title>
+          Adresse
+        </mat-card-title>
+
+        <mat-form-field fxFill>
+          <input matInput placeholder="No. de batiment, Adresse, ville">
+        </mat-form-field>
+      </div>
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
         <div fxFlex="50%">
           <mat-card-title>
