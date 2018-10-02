@@ -7,3 +7,8 @@ get_dep_server:
 get_dep_client:
     cd client
     yarn
+
+
+deploy_static
+    cd client
+    yarn build
