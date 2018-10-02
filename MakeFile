@@ -9,6 +9,6 @@ get_dep_client:
     yarn
 
 
-deploy_static
+deploy_static:
     cd client
     yarn build
