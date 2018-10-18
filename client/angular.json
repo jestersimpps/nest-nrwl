@@ -155,6 +155,34 @@
           }
         }
       }
+    },
+    "ngrx": {
+      "root": "libs/ngrx",
+      "sourceRoot": "libs/ngrx/src",
+      "projectType": "library",
+      "prefix": "client",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ngrx/src/test.ts",
+            "tsConfig": "libs/ngrx/tsconfig.spec.json",
+            "karmaConfig": "libs/ngrx/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngrx/tsconfig.lib.json",
+              "libs/ngrx/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

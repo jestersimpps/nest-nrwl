@@ -9,7 +9,7 @@ import {ProjectModule} from "./project/project.module";
 import {NewProjectModule} from "./new-project/new-project.module";
 
 @NgModule({
-  declarations: [DemoComponent],
+  declarations: [DemoComponent,],
   imports: [
     BrowserModule,
     SharedModule,

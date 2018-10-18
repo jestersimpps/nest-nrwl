@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'demo-dashboard',
   template: `
     <div class="sm-col-12 md-col-10 mx-auto pb3">
-      <demo-projectlist></demo-projectlist>
     </div>
   `,
   styles: [``]})

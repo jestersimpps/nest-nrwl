@@ -18,6 +18,9 @@
     "paths": {
       "@client/ui": [
         "libs/ui/src/index.ts"
+      ],
+      "@client/ngrx": [
+        "libs/ngrx/src/index.ts"
       ]
     }
   },
