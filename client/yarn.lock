@@ -309,9 +309,9 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
 
-"@nrwl/nx@6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-6.2.0.tgz#7737846a5d03bc25e0d9cd418e9bde11697c85ad"
+"@nrwl/nx@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.1.1.tgz#cc0483f66024fd4854d4a14a89da6064121afae6"
 
 "@nrwl/schematics@6.3.1":
   version "6.3.1"

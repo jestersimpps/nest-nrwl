@@ -1,21 +1,27 @@
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
   <div fxFlex="50%">
-    <mat-card >
-      <mat-list class="pb1">
-        <b>Dernière version:</b>
-        <mat-list-item>Remplace date du contrat</mat-list-item>
-        <mat-list-item><i class="material-icons mr1">history</i> 01/10/2018 de <b
-          class="px1">bert.wijnants@gmail.com</b>
-        </mat-list-item>
-      </mat-list>
-      <button mat-flat-button>
-        <i class="material-icons mr1">
-          save_alt
-        </i> Télécharger
-      </button>
-    </mat-card>
+    <mat-list>
+      <mat-list-item *ngFor="let doc of documents">
+        <mat-icon mat-list-icon>attachment</mat-icon>
+        <h4 mat-line> {{doc?.title}}</h4>
+        <p mat-line> {{doc?.fileName}} </p>
+        <span class="mx1">
+          <button mat-mini-fab color="primary">
+            <mat-icon>
+              cloud_download
+            </mat-icon>
+          </button>
+        </span>
+        <button mat-mini-fab color="warn">
+          <mat-icon>
+            delete
+          </mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
   </div>
   <div fxFlex="50%">
+    <mat-card >
     <form [formGroup]="form" (ngSubmit)="submit()">
       <input id="fileInput" type="file" hidden>
       <div fxFill class="pb2">
@@ -27,20 +33,21 @@
         <input class="ml1" id="textInput" type="text" placeholder="No file chosen" disabled>
       </div>
       <mat-form-field fxFill>
-        <input matInput placeholder="Titre de changement">
+        <input matInput placeholder="Titre de document">
       </mat-form-field>
       <mat-form-field fxFill>
-        <textarea matInput placeholder="Description du changement" rows="3"></textarea>
+        <textarea matInput placeholder="Description du document" rows="3"></textarea>
       </mat-form-field>
       <div fxLayoutAlign="end center" fxFill>
         <button mat-flat-button>
           <i class="material-icons mr1">
-            save
+            cloud_upload
           </i>
-          Sauvegarder
+          Ajouter
         </button>
       </div>
     </form>
+    </mat-card>
   </div>
 
 </div>
