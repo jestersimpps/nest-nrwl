@@ -9,7 +9,7 @@
       <mat-card class=" my1 mx1">
         <mat-card-title>
           <span>Square de Noville 3, 1081 KOEKELBERG</span>
-          <button mat-mini-fab style="float: right" color="white">
+          <button mat-mini-fab style="float: right" color="white" (click)="openDossierDialog()">
             <i class="material-icons">
               settings
             </i>
@@ -24,7 +24,7 @@
       <mat-card class=" my1 mx1">
         <mat-card-title>
           Collaborateurs
-          <button mat-mini-fab style="float: right" color="white">
+          <button mat-mini-fab style="float: right" color="white" (click)="openCoWorkersrDialog()">
             <i class="material-icons">
               settings
             </i>
@@ -256,7 +256,7 @@
           </div>
         </mat-card-content>
       </mat-card>
-      <button mat-fab color="primary" style="position: fixed; right: 30px; bottom: 30px;" (click)="openDialog()">
+      <button mat-fab color="primary" style="position: fixed; right: 30px; bottom: 30px;" (click)="openEditDialog()">
         <mat-icon>save</mat-icon>
       </button>
 

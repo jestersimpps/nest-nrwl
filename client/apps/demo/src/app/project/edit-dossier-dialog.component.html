@@ -1,0 +1,40 @@
+
+<h1 mat-dialog-title>Information du dossier</h1>
+<div mat-dialog-content>
+  <form  fxFill>
+    <div>
+      <mat-card-title>
+        Adresse
+      </mat-card-title>
+
+      <mat-form-field fxFill>
+        <input matInput placeholder="No. de batiment, Adresse, ville">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+      <div fxFlex="50%">
+        <mat-card-title>
+          Vendeur
+        </mat-card-title>
+
+        <mat-form-field fxFill>
+          <input matInput placeholder="Nom du Vendeur">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="50%">
+        <mat-card-title>
+          Acquéreur
+        </mat-card-title>
+        <mat-form-field fxFill>
+          <input matInput placeholder="Nom d'Acquéreur">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button cdkFocusInitial>Saufgarder</button>
+</div>
