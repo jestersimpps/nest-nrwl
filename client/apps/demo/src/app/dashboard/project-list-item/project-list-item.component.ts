@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
     <mat-expansion-panel class="mat-elevation-z0">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <i class="material-icons mr3">work</i>Square de Noville 3, 1081 KOEKELBERG
+          <i class="material-icons mr3">folder</i>Square de Noville 3, 1081 KOEKELBERG
         </mat-panel-title>
         <mat-panel-description>
           <i class="material-icons mr1">history</i>Last updated: 01/10/2018 by eric@fednot.be

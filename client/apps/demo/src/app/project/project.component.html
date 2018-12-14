@@ -3,7 +3,7 @@
   <mat-tab-group>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon mr1">info</mat-icon>
+        <mat-icon class="example-tab-icon mr1">folder_open</mat-icon>
         Dossier Information
       </ng-template>
       <mat-card class=" my1 mx1">
@@ -71,11 +71,11 @@
             <i class="material-icons">
               history
             </i>
-            Latest version
+            Dernière version
           </button>
           <mat-menu #appMenu="matMenu">
-            <button mat-menu-item > <small>Latest version</small> </button>
-            <button mat-menu-item *ngFor="let change of changes"> <small>{{change?.date | date: 'medium'}} by {{change?.author}}</small> </button>
+            <button mat-menu-item > <small>Dernière version</small> </button>
+            <button mat-menu-item *ngFor="let change of changes"> <small>{{change?.date | date: 'medium'}} - {{change?.author}}</small> </button>
           </mat-menu>
         </mat-card-title>
         <mat-card-content>

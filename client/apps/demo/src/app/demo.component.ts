@@ -24,7 +24,7 @@ import {Component} from '@angular/core';
           </button>
           <button mat-button mat-raised-button routerLink="/new/project">
             <i class="material-icons">
-              playlist_add
+              create_new_folder
             </i> Nouveau dossier
           </button>
         </div>
