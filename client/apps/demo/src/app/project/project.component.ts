@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styles: [``]
 })
 export class ProjectComponent implements OnInit {
-  expandChanges = true
+  expandChanges = false;
   constructor() {
   }
 

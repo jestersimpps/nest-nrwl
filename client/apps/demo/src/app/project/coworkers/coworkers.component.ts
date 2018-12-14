@@ -5,24 +5,34 @@ import {MatChipInputEvent} from "@angular/material";
 @Component({
   selector: 'demo-coworkers',
   template: `
-
-    <mat-form-field class="example-chip-list" fxFill>
+    <div fxFill class="pb2">
       <mat-chip-list #chipList>
         <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
-                  [removable]="removable" (removed)="remove(fruit)">
+                  [removable]="removable" (removed)="remove(fruit)" [ngClass]="{'notary': fruit.role === 'notary' }">
           {{fruit.name}}
-          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
         </mat-chip>
-        <input placeholder="Ajoute nouveau cooperateur..."
-               [matChipInputFor]="chipList"
-               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-               [matChipInputAddOnBlur]="addOnBlur"
-               (matChipInputTokenEnd)="add($event)">
       </mat-chip-list>
-    </mat-form-field>
+    </div>
+    <div class="mr1" style="float:left">
+      <div class="legendblock mr1" style="background-color: #3f51b5"></div>
+      <label> Administrateur</label></div>
+    <div>
+      <div class="legendblock mr1" style="background-color: #e0e0e0"></div>
+      <label> Participant</label></div>
   `,
-  styles: [``]})
-export class CoworkersComponent  {
+  styles: [`
+    .notary {
+      background-color: #3f51b5;
+      color: white !important;
+    }
+
+    .legendblock {
+      width: 20px;
+      height: 20px;
+      float: left;
+    }`]
+})
+export class CoworkersComponent {
 
   visible = true;
   selectable = true;
@@ -30,9 +40,9 @@ export class CoworkersComponent  {
   addOnBlur = true;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   fruits: any[] = [
-    {name: 'bert.wijnants@gmail.com'},
-    {name: 'matthias.spaers@gmail.com'},
-    {name: 'wim.bonen@fednot.be'},
+    {name: 'wim.bonen@fednot.be', role: 'notary'},
+    {name: 'bert.wijnants@gmail.com', role: 'citizen'},
+    {name: 'matthias.spaers@gmail.com', role: 'citizen'},
   ];
 
   add(event: MatChipInputEvent): void {

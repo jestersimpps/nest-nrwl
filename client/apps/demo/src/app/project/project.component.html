@@ -1,42 +1,77 @@
-  <div class="sm-col-12 md-col-10 mx-auto pb3">
-    <mat-card class=" my1 mx1">
-      <mat-card-title>
-        <span>Square de Noville 3, 1081 KOEKELBERG</span>
-      </mat-card-title>
-      <mat-card-subtitle><b>Type du bien immobilier : </b> Maison</mat-card-subtitle>
-      <mat-card-subtitle>
-        <demo-buyer-seller></demo-buyer-seller>
-      </mat-card-subtitle>
-    </mat-card>
+<div class="sm-col-12 md-col-10 mx-auto py1">
 
-    <mat-card class=" my1 mx1">
-      <mat-card-title>
-        Documents attachées
-      </mat-card-title>
-      <mat-card-content>
-        <demo-document-edit></demo-document-edit>
-      </mat-card-content>
-    </mat-card>
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mr1">info</mat-icon>
+        Dossier Information
+      </ng-template>
+      <mat-card class=" my1 mx1">
+        <mat-card-title>
+          <span>Square de Noville 3, 1081 KOEKELBERG</span>
+          <button mat-mini-fab style="float: right" color="white">
+            <i class="material-icons">
+              settings
+            </i>
+          </button>
+        </mat-card-title>
+        <mat-card-subtitle><b>Type du bien immobilier : </b> Maison</mat-card-subtitle>
+        <mat-card-subtitle>
+          <demo-buyer-seller></demo-buyer-seller>
+        </mat-card-subtitle>
+      </mat-card>
 
-    <mat-card class=" my1 mx1">
-      <mat-card-title>
-        Cooperateurs
-      </mat-card-title>
-      <mat-card-content>
-        <demo-coworkers></demo-coworkers>
-      </mat-card-content>
-    </mat-card>
+      <mat-card class=" my1 mx1">
+        <mat-card-title>
+          Cooperateurs
+          <button mat-mini-fab style="float: right" color="white">
+            <i class="material-icons">
+              settings
+            </i>
+          </button>
+        </mat-card-title>
+        <mat-card-content>
+          <demo-coworkers></demo-coworkers>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class=" my1 mx1">
+        <mat-card-title>
+          Documents attachées
+        </mat-card-title>
+        <mat-card-content>
+          <demo-document-edit></demo-document-edit>
+        </mat-card-content>
+      </mat-card>
+
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mr1">library_books</mat-icon>
+        Modifier Contrat
+      </ng-template>
+
+      <mat-card class=" my1 mx1">
+        <mat-card-content>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mr1">restore</mat-icon>
+        Historique des changements
+      </ng-template>
+      <mat-card class=" my1 mx1">
+        <mat-card-content fxLayoutAlign="end center">
+          <mat-slide-toggle class="px2" [(ngModel)]="expandChanges">Ouvrir tous les descriptions</mat-slide-toggle>
+        </mat-card-content>
+        <demo-document-change-list [expanded]="expandChanges"></demo-document-change-list>
+      </mat-card>
+    </mat-tab>
+
+  </mat-tab-group>
 
 
-
-    <mat-card class=" my1 mx1">
-      <mat-card-title>
-        Historique des changes
-      </mat-card-title>
-      <mat-card-content fxLayoutAlign="end center">
-        <mat-slide-toggle class="px2" [(ngModel)]="expandChanges">Ouvrir tous les descriptions</mat-slide-toggle>
-      </mat-card-content>
-      <demo-document-change-list [expanded]="expandChanges"></demo-document-change-list>
-    </mat-card>
-
-  </div>
+</div>

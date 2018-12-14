@@ -9,7 +9,9 @@ import {HistoricalChange} from "../../models/historical-change.model";
         <mat-panel-title>{{change?.title}}
         </mat-panel-title>
         <mat-panel-description fxLayoutAlign="end center">
-          <i class="material-icons mr1">history</i> {{change?.date | date: 'medium'}} by <b class="px1">{{change?.author}}</b>
+          <i *ngIf="change?.changeType ===  'edit'" class="material-icons mr1">history</i>
+          <i *ngIf="change?.changeType ===  'file'" class="material-icons mr1">attachment</i>
+          {{change?.date | date: 'medium'}} by <b class="px1">{{change?.author}}</b>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div  fxLayout="row" fxLayoutAlign="space-between center">

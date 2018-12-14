@@ -4,12 +4,14 @@ import {HistoricalChange} from "../../models/historical-change.model";
 @Component({
   selector: 'demo-document-change-list',
   template: '<demo-document-change *ngFor="let change of changes" [change]="change" [expanded]="expanded"></demo-document-change>',
-  styles: [``]})
+  styles: [``]
+})
 export class DocumentChangeListComponent implements OnInit {
   @Input() expanded: boolean;
   changes: HistoricalChange[] = [
     {
       author: 'bert.wijnants@gmail.com',
+      changeType: 'edit',
       date: new Date(),
       title: 'Remplace date du contrat',
       project_id: 1,
@@ -17,12 +19,22 @@ export class DocumentChangeListComponent implements OnInit {
     },
     {
       author: 'matthias.spaers@gmail.com',
+      changeType: 'edit',
       date: new Date(),
       title: 'Correction du nom',
       project_id: 1,
-      description: 'Fusce velit leo, condimentum eu sapien vitae, dictum tincidunt metus. In viverra libero velit, vitae mollis diam faucibus eu. Sed a cursus neque. Suspendisse tincidunt luctus quam quis ultricies. Morbi at nisl laoreet, imperdiet ligula aliquet, pharetra felis. Suspendisse egestas ligula sed consequat feugiat. In nibh ligula, consectetur et sodales a, efficitur nec libero. Nunc bibendum dolor pulvinar, faucibus ante pharetra, lacinia arcu. Donec non vulputate felis, elementum porta risus.' },
+      description: 'Fusce velit leo, condimentum eu sapien vitae, dictum tincidunt metus. In viverra libero velit, vitae mollis diam faucibus eu. Sed a cursus neque. Suspendisse tincidunt luctus quam quis ultricies. Morbi at nisl laoreet, imperdiet ligula aliquet, pharetra felis. Suspendisse egestas ligula sed consequat feugiat. In nibh ligula, consectetur et sodales a, efficitur nec libero. Nunc bibendum dolor pulvinar, faucibus ante pharetra, lacinia arcu. Donec non vulputate felis, elementum porta risus.'
+    },
     {
       author: 'wim.bonen@fednot.be',
+      changeType: 'file',
+      date: new Date(),
+      title: 'Ajoute fichier',
+      project_id: 1,
+      description: '\'PbRen_04A.pdf\' - renseignements urbanistiques '
+    }, {
+      author: 'wim.bonen@fednot.be',
+      changeType: 'edit',
       date: new Date(),
       title: 'Ajoute paragraphe 15',
       project_id: 1,
@@ -31,7 +43,8 @@ export class DocumentChangeListComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

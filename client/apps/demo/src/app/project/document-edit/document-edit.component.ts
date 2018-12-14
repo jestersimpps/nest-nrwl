@@ -17,12 +17,15 @@ export class DocumentEditComponent {
     {
       title: 'Certificat PEB',
       fileName: 'PEB_Cert_1234.pdf',
+      canDelete: true
     }, {
       title: 'controle installation éctrique',
       fileName: 'EL_2018_05.pdf',
+      canDelete: true
     }, {
       title: 'renseignements urbanistiques',
       fileName: 'PbRen_04A.pdf',
+      canDelete: false
     },
   ]
 

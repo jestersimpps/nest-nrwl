@@ -8,13 +8,14 @@ import {
   MatDividerModule,
   MatExpansionModule,
   MatFormFieldModule, MatIconModule, MatInputModule, MatListModule,
-  MatMenuModule, MatRadioModule, MatSlideToggleModule,
+  MatMenuModule, MatRadioModule, MatSlideToggleModule, MatTabsModule,
   MatToolbarModule
 } from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {DemoRoutingModule} from "../demo-routing.module";
 import {BuyerSellerComponent} from "./buyer-seller/buyer-seller.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +43,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatListModule,
     MatRadioModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ]
 })
 export class SharedModule {
