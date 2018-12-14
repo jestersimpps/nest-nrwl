@@ -6,11 +6,14 @@ import {SharedModule} from "../shared/shared.module";
 import {DocumentEditComponent} from "./document-edit/document-edit.component";
 import {CoworkersComponent} from "./coworkers/coworkers.component";
 import {DocumentChangeListComponent} from "./document-change-list/document-change-list.component";
+import {FroalaEditorModule, FroalaViewModule} from "angular-froala-wysiwyg";
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   declarations: [
     ProjectComponent,

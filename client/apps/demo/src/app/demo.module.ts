@@ -16,8 +16,7 @@ import {NewProjectModule} from "./new-project/new-project.module";
     NxModule.forRoot(),
     DashboardModule,
     ProjectModule,
-    NewProjectModule
-
+    NewProjectModule,
   ],
   providers: [],
   bootstrap: [DemoComponent]
