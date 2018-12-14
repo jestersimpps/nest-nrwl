@@ -7,6 +7,7 @@ import {DocumentEditComponent} from "./document-edit/document-edit.component";
 import {CoworkersComponent} from "./coworkers/coworkers.component";
 import {DocumentChangeListComponent} from "./document-change-list/document-change-list.component";
 import {FroalaEditorModule, FroalaViewModule} from "angular-froala-wysiwyg";
+import {NewEditDialog} from "./new-edit-dialog.component";
 
 @NgModule({
   imports: [
@@ -20,7 +21,12 @@ import {FroalaEditorModule, FroalaViewModule} from "angular-froala-wysiwyg";
     DocumentChangeComponent,
     DocumentEditComponent,
     CoworkersComponent,
-    DocumentChangeListComponent],
+    DocumentChangeListComponent,
+    NewEditDialog
+  ],
+  entryComponents: [
+    NewEditDialog,
+  ],
   exports: [ProjectComponent]
 })
 export class ProjectModule {
