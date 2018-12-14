@@ -9,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
           <i class="material-icons mr3">folder</i>Square de Noville 3, 1081 KOEKELBERG
         </mat-panel-title>
         <mat-panel-description>
-          <i class="material-icons mr1">history</i>Last updated: 01/10/2018 by eric@fednot.be
+          <i class="material-icons mr1">history</i>Dernière modification: 01/10/2018 par eric@fednot.be
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="container" fxLayout="row" fxLayoutAlign="space-between center">

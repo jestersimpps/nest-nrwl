@@ -11,7 +11,7 @@ import {Component, OnInit} from '@angular/core';
 
     </mat-card>
     <mat-card class=" my1 mx1">
-      <mat-card-title>Dossiers Invités</mat-card-title>
+      <mat-card-title>Invitations</mat-card-title>
       <demo-projectlistitem></demo-projectlistitem>
       <demo-projectlistitem></demo-projectlistitem>
       <demo-projectlistitem></demo-projectlistitem>

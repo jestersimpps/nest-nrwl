@@ -10,7 +10,7 @@ import {HistoricalChange} from "../../models/historical-change.model";
           <i *ngIf="change?.changeType ===  'edit'" class="material-icons mr1">edit</i>
           <i *ngIf="change?.changeType ===  'file'" class="material-icons mr1">attachment</i>
           <i *ngIf="change?.changeType ===  'delete'" class="material-icons mr1">delete</i>
-          {{change?.date | date: 'medium'}} by <span class="px1">{{change?.author}}</span>
+          {{change?.date | date: 'medium'}}<span class="px1">par</span>{{change?.author}}
         </mat-panel-title>
         <mat-panel-description fxLayoutAlign="end center">
          <b> {{change?.title}}</b>

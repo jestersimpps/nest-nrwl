@@ -4,7 +4,7 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon class="example-tab-icon mr1">folder_open</mat-icon>
-        Dossier Information
+         Informations Dossier
       </ng-template>
       <mat-card class=" my1 mx1">
         <mat-card-title>
@@ -23,7 +23,7 @@
 
       <mat-card class=" my1 mx1">
         <mat-card-title>
-          Cooperateurs
+          Collaborateurs
           <button mat-mini-fab style="float: right" color="white">
             <i class="material-icons">
               settings
@@ -37,7 +37,7 @@
 
       <mat-card class=" my1 mx1">
         <mat-card-title>
-          Documents attachées
+          Documents attachés
         </mat-card-title>
         <mat-card-content>
           <demo-document-edit></demo-document-edit>
@@ -269,7 +269,7 @@
       </ng-template>
       <mat-card class=" my1 mx1">
         <mat-card-content fxLayoutAlign="end center">
-          <mat-slide-toggle class="px2" [(ngModel)]="expandChanges">Ouvrir tous les descriptions</mat-slide-toggle>
+          <mat-slide-toggle class="px2" [(ngModel)]="expandChanges">Tout Ouvrir</mat-slide-toggle>
         </mat-card-content>
         <demo-document-change-list [expanded]="expandChanges"></demo-document-change-list>
       </mat-card>

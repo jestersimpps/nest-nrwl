@@ -11,7 +11,7 @@ import {Component, OnInit} from '@angular/core';
       <span><button mat-icon-button><i class="material-icons ">arrow_right_alt</i></button> </span>
       <span>
       <button mat-mini-fab color="warn" class="mat-elevation-z0"><i
-        class="material-icons ">attach_money</i></button> <b class="ml1">L’acquéreur</b> : Matthias Spaers
+        class="material-icons ">attach_money</i></button> <b class="ml1">Acquéreur</b> : Matthias Spaers
     </span>
     </div>
   `,
