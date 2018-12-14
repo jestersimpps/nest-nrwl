@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Changes} from "./document-change-list/document-change-list.component";
 
 @Component({
   selector: 'demo-project',
@@ -10,6 +11,7 @@ import {Component, OnInit} from '@angular/core';
   `]
 })
 export class ProjectComponent implements OnInit {
+  changes = Changes;
   expandChanges = false;
   constructor() {
   }
